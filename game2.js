@@ -10,6 +10,7 @@ Q.input.keyboardControls({
     9: "tab"
 });
 
+var EPSILON = 10;
 var DEFAULT_BUTTONS = [];
 /*
     {label: "A"},
@@ -24,12 +25,35 @@ var DEFAULT_BUTTONS = [];
 Q.Sprite.extend("Unit", {
   init: function(p, d) {
       var defaults = {
-          buttons: DEFAULT_BUTTONS
+          buttons: DEFAULT_BUTTONS,
+          speed: 2
       };
       Q._defaults(d, defaults);
       this._super(p, d);
       this.add("2d");
-  }
+  },
+  step: function(dt) {
+      if( !this.p.destination ) {
+          return;
+      }
+      var x = this.p.destination.x,
+          y = this.p.destination.y;
+      if( Math.abs(this.p.x - x) < EPSILON ) {
+          this.p.destination = null;
+      }
+      if( x > this.p.x ) {
+          this.turnLeft();
+      } else {
+          this.turnRight();
+      }
+  },
+  turnLeft: function() {
+      this.p.vx = -this.p.speed;
+  },
+  turnRight: function() {
+      this.p.vx = this.p.speed;
+  },
+
 });
 
 Q.Unit.extend("Archer", {
