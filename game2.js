@@ -13,6 +13,9 @@ Q.input.keyboardControls({
     58: "zoomReset"
 });
 
+Q.controls();
+
+var SCROLL_VELOCITY = 10;
 var EPSILON = 10;
 var DEFAULT_BUTTONS = [];
 /*
@@ -52,8 +55,8 @@ Q.component('stageTouchHandler', {
         
         //Now you can add your logic here to place something in the scene at that 
         // position... for example:
-        if( Q.stage().viewport.following ) {
-            Q.stage().viewport.following.setDestination(tilePosition);
+        if( Q.stage(2).options.unit ) {
+            Q.stage(2).options.unit.setDestination(tilePosition);
         }
     }
 });
@@ -207,8 +210,8 @@ Q.scene('battle', function(stage) {
 
     Q.stageTMX("test1.tmx", stage);
 
-    var joe = stage.insert(new Q.Engineer({x: 2450, y: 1400 }));
-    var ally = stage.insert(new Q.Angel({x: 3050, y: 1400 }));
+    var joe = stage.insert(new Q.Engineer({x: 6450, y: 1400 }));
+    var ally = stage.insert(new Q.Angel({x: 9050, y: 1400 }));
 
     stage.add("viewport");
     stage.add("stageTouchHandler");
@@ -227,7 +230,25 @@ Q.scene('battle', function(stage) {
         var last = stage.viewport.following;
         stage.unfollow();
         stage.follow( last == joe ? ally : joe );
-        Q.stageScene('active_unit_actions', 2, {unit: stage.viewport.following});        
+        Q.stageScene('active_unit_actions', 2, {unit: stage.viewport.following});
+    });
+
+    Q.input.on("left", stage, "unfollow");
+    Q.input.on("right", stage, "unfollow");
+    Q.input.on("down", stage, "unfollow");
+    Q.input.on("up", stage, "unfollow");
+
+    stage.on("step", function(dt) {
+        if( Q.inputs['left'] ) {
+            stage.viewport.x -= SCROLL_VELOCITY;
+        } else if( Q.inputs['right'] ) {
+            stage.viewport.x += SCROLL_VELOCITY;
+        } 
+        if( Q.inputs['up'] ) {
+            stage.viewport.y -= SCROLL_VELOCITY;
+        } else if( Q.inputs['down'] ) {
+            stage.viewport.y += SCROLL_VELOCITY;
+        } 
     });
 });
 
