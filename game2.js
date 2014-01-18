@@ -25,11 +25,52 @@ var DEFAULT_BUTTONS = [];
 ];
 */
 
+// component by Jacques Dés Prés
+// https://plus.google.com/103224258695442602351/posts/UqpvNcCJo6Y
+Q.component('stageTouchHandler', {
+    added: function() {
+        var self = this;
+        Q.el.addEventListener("touchstart", function(e) {
+            self.touch(e);
+        });
+        Q.el.addEventListener("mousedown", function(e) {
+            self.touch(e);
+        });
+    },
+
+    touch: function(e) {
+        //this will process the touch event object and return a simple touch object
+        var touch = Q.touchInput.normalizeTouch(e, this.entity);
+        
+        //this is a custom method which will return the x and y position at the center 
+        // of the tile you touched.. read more below..
+        var tilePosition = Q.touchTilePos(touch);
+        
+        //Now you can add your logic here to place something in the scene at that 
+        // position... for example:
+        if( Q.stage().viewport.following ) {
+            Q.stage().viewport.following.setDestination(tilePosition);
+        }
+    }
+});
+
+//this function takes a touch, and will return the x and y tile coordinates for that 
+// touch.  this does assume your tile size is 32x32
+Q.touchTilePos = function(touch) {
+    var tempX = Math.floor(touch.p.x / 32);
+    var tempY = Math.floor(touch.p.y / 32);
+    
+    return {
+        x: (tempX * 32) + 16,
+        y: (tempY * 32) + 16                
+    };
+};
+
 Q.Sprite.extend("Unit", {
   init: function(p, d) {
       var defaults = {
           buttons: DEFAULT_BUTTONS,
-          speed: 2
+          speed: 20
       };
       Q._defaults(d, defaults);
       this._super(p, d);
@@ -41,8 +82,11 @@ Q.Sprite.extend("Unit", {
       }
       var x = this.p.destination.x,
           y = this.p.destination.y;
-      if( Math.abs(this.p.x - x) < EPSILON ) {
-          this.p.destination = null;
+      var delta = Math.abs(this.p.x - x);
+      if( delta < EPSILON ) {
+          this.setDestination();
+          this.stop();
+          return;
       }
       if( x > this.p.x ) {
           this.turnLeft();
@@ -50,11 +94,17 @@ Q.Sprite.extend("Unit", {
           this.turnRight();
       }
   },
+  setDestination: function(dest) {
+      this.p.destination = dest;
+  },
+  stop: function() {
+      this.p.vx = 0;
+  },
   turnLeft: function() {
-      this.p.vx = -this.p.speed;
+      this.p.vx = this.p.speed;
   },
   turnRight: function() {
-      this.p.vx = this.p.speed;
+      this.p.vx = -this.p.speed;
   },
 
 });
@@ -150,10 +200,11 @@ Q.scene('battle', function(stage) {
 
     Q.stageTMX("test1.tmx", stage);
 
-    var joe = stage.insert(new Q.Engineer({x: 2450, y: 1400, vx: -16 }));
-    var ally = stage.insert(new Q.Angel({x: 3050, y: 1400, vx: 20 }));
+    var joe = stage.insert(new Q.Engineer({x: 2450, y: 1400 }));
+    var ally = stage.insert(new Q.Angel({x: 3050, y: 1400 }));
 
     stage.add("viewport");
+    stage.add("stageTouchHandler");
 
     Q.input.on("zoomOut", function() {
         stage.viewport.scale *= 0.5;
