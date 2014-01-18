@@ -39,6 +39,10 @@ Q.component('stageTouchHandler', {
     },
 
     touch: function(e) {
+
+        // @@TODO very brittle. see button.touch below.
+        if( typeof IN_BUTTON_PRESS != "undefined" && IN_BUTTON_PRESS ) return;
+
         //this will process the touch event object and return a simple touch object
         var touch = Q.touchInput.normalizeTouch(e, this.entity);
         
@@ -140,12 +144,15 @@ Q.Unit.extend("Angel", {
 Q.UI.TileButton = Q.UI.Button.extend("TileButton", {
     init: function(p, callback) {
         this._super(p, callback);
-        this.on("touch", function() {
+        this.on("touch", function(e) {
+            // @@TODO: this is very brittle, and relies upon this event being fired first
+            IN_BUTTON_PRESS = true;
             this.p.shadow = 0;
             this.p.y += 4;
             this.p.x += 2;
         });
         this.on("touchEnd", function() {
+            IN_BUTTON_PRESS = null;
             this.p.shadow = 4;
             this.p.y -= 4;
             this.p.x -= 2;
