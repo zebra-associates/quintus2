@@ -10,7 +10,8 @@ Q.input.keyboardControls({
     9: "tab"
 });
 
-var DEFAULT_BUTTONS = [
+var DEFAULT_BUTTONS = [];
+/*
     {label: "A"},
     {label: "B"},
     {label: "C"},
@@ -18,6 +19,7 @@ var DEFAULT_BUTTONS = [
     {label: "E"},
     {label: "F"}
 ];
+*/
 
 Q.Sprite.extend("Unit", {
   init: function(p, d) {
@@ -34,7 +36,8 @@ Q.Unit.extend("Archer", {
   init: function(p) {
       this._super(p, {
           hp: 10, 
-          asset: "archer.png"
+          asset: "archer.png",
+          buttons: [{label: "Shoot"}]
       });
   }
 });
@@ -43,7 +46,7 @@ Q.Unit.extend("Engineer", {
       this._super(p, {
           hp: 4,
           asset: "engineer.png",
-          buttons: [{label: "Bld"}]
+          buttons: [{label: "Build"}]
       });
   }
 });
@@ -51,7 +54,8 @@ Q.Unit.extend("Angel", {
   init: function(p) {
       this._super(p, {
           hp: 6,
-          asset: "angel.png"
+          asset: "angel.png",
+          buttons: [{label: "Bless"}, {label: "Curse"}]
       });
   }
 });
@@ -79,7 +83,9 @@ Q.scene('active_unit_actions', function(stage) {
     if( !active_unit ) {
         stage.insert(new Q.UI.Text({label: "No unit is selected",
                                     y: Q.height - 50,
-                                    x: Q.width / 2
+                                    x: Q.width / 2,
+                                    size: 16,
+                                    weight: 400
                                    }));
         return;
     }
@@ -106,6 +112,7 @@ Q.scene('active_unit_actions', function(stage) {
             border: 1,
             shadow: 4,
             shadowColor: "rgba(0,0,0,0.5)",
+            font: "12pt arial",
             label: buttons[i].label
         }, function() { console.log(this); }));
     }
