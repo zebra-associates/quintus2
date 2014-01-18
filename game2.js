@@ -1,13 +1,16 @@
 var Q = Quintus({ development: true });
 
-Q.include("Sprites, Scenes, Input, UI, Touch, 2D");
+Q.include("Sprites, Scenes, Input, UI, Touch, 2D, TMX");
 
-Q.gravityY = 0;
+//Q.gravityY = 0;
 
 Q.setup({ height: 400, width: 1000 }).touch();
 
 Q.input.keyboardControls({
-    9: "tab"
+    9: "tab",
+    56: "zoomOut",
+    57: "zoomIn",
+    58: "zoomReset"
 });
 
 var EPSILON = 10;
@@ -144,10 +147,23 @@ Q.scene('active_unit_actions', function(stage) {
 });
 
 Q.scene('battle', function(stage) {
-    var joe = stage.insert(new Q.Engineer({x: 50, y: 50, vx: -6 }));
-    var ally = stage.insert(new Q.Angel({x: 150, y: 50, vx: 10 }));
+
+    Q.stageTMX("test1.tmx", stage);
+
+    var joe = stage.insert(new Q.Engineer({x: 2450, y: 1400, vx: -16 }));
+    var ally = stage.insert(new Q.Angel({x: 3050, y: 1400, vx: 20 }));
 
     stage.add("viewport");
+
+    Q.input.on("zoomOut", function() {
+        stage.viewport.scale *= 0.5;
+    });
+    Q.input.on("zoomIn", function() {
+        stage.viewport.scale *= 2;
+    });
+    Q.input.on("zoomReset", function() {
+        stage.viewport.scale = 1;
+    });
 
     Q.input.on("tab", function() {
         var last = stage.viewport.following;
@@ -157,7 +173,9 @@ Q.scene('battle', function(stage) {
     });
 });
 
-Q.load(["archer.png", "engineer.png", "angel.png"], function() {
-    Q.stageScene('battle');
-    Q.stageScene('active_unit_actions', 2);
+Q.loadTMX("test1.tmx", function() {
+    Q.load(["archer.png", "engineer.png", "angel.png"], function() {
+        Q.stageScene('battle');
+        Q.stageScene('active_unit_actions', 2);
+    });
 });
