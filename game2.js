@@ -211,7 +211,7 @@ Q.scene('battle', function(stage) {
     Q.stageTMX("test5.tmx", stage);
 
     var joe = stage.insert(new Q.Engineer({x: 1450, y: 1400 }));
-    var ally = stage.insert(new Q.Angel({x: 850, y: 400 }));
+    var ally = stage.insert(new Q.Angel({x: 1050, y: 400 }));
 
     stage.add("viewport");
     stage.add("stageTouchHandler");
