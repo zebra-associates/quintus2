@@ -77,11 +77,47 @@ Q.Sprite.extend("Unit", {
   init: function(p, d) {
       var defaults = {
           buttons: DEFAULT_BUTTONS,
-          speed: 20
+          speed: 20,
+          climbing: null
       };
       Q._defaults(d, defaults);
       this._super(p, d);
       this.add("2d");
+      this.on("bump.left", "bumpLeft");
+      this.on("bump.right", "bumpRight");
+      this.on("bump.bottom", "bumpBottom");
+  },
+  getTilePosition: function() {
+     return { x: Math.round((this.p.x - this.p.w / 2) / 32),
+              y: Math.round((this.p.y - this.p.h / 2) / 32) };
+  },
+  foo: function(e, dir) {
+      var obj = e.obj;
+      if( obj == Q.stage()._collisionLayers[0] ) {
+          var pos = this.getTilePosition();
+          if( obj.getTile(pos.x, pos.y - 1) === null
+              && 
+              obj.getTile(pos.x + dir, pos.y - 1) === null ) {
+              this.p.vy = this.p.speed / -2;
+              this.p.gravity = 0;
+              this.p.climbing = true;
+          }
+      }
+  },
+  bumpLeft: function(e) { return this.foo(e, -1); },
+  bumpRight: function(e) { return this.foo(e, 1); },
+  directionX: function() {
+    if( this.p.vx ) {
+        return this.p.vx / Math.abs(this.p.vx);
+    }
+    return 0;
+  },
+  bumpBottom: function(e) {
+    if( this.p.climbing ) {
+        this.p.gravity = 1;
+        this.p.climbing = null;
+        console.log("gotcha");
+    }
   },
   step: function(dt) {
       if( !this.p.destination ) {
@@ -210,8 +246,8 @@ Q.scene('battle', function(stage) {
 
     Q.stageTMX("test5.tmx", stage);
 
-     joe = stage.insert(new Q.Engineer({x: 1450, y: 1400 }));
-     ally = stage.insert(new Q.Angel({x: 1650, y: 0 }));
+    joe = stage.insert(new Q.Engineer({x: 1450, y: 1400 }));
+    ally = stage.insert(new Q.Angel({x: 1650, y: 0 }));
 
     stage.add("viewport");
     stage.add("stageTouchHandler");

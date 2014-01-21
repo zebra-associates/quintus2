@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" width="200" height="100" tilewidth="32" tileheight="32">
-  <tileset firstgid="1" name="bagles" tilewidth="32" tileheight="32">
-    <image source="textset1.png" trans="ff00ff" width="320" height="256"/>
-  </tileset>
- <layer name="Back" width="200" height="100">
+ <tileset firstgid="1" name="bagles" tilewidth="32" tileheight="32">
+  <image source="../images/textset1.png" trans="ff00ff" width="320" height="256"/>
+ </tileset>
+ <layer name="Back" width="200" height="100" visible="0">
   <data>
    <tile gid="10"/>
    <tile gid="10"/>
@@ -20008,9 +20008,9 @@
   </data>
  </layer>
  <layer name="Main" width="200" height="100" opacity="0.9">
-   <properties>
-     <property name="collision" value="true"/>
-   </properties>
+  <properties>
+   <property name="collision" value="true"/>
+  </properties>
   <data>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -40014,7 +40014,7 @@
    <tile gid="65"/>
   </data>
  </layer>
- <layer name="Fore" width="200" height="100">
+ <layer name="Fore" width="200" height="100" visible="0">
   <data>
    <tile gid="0"/>
    <tile gid="0"/>
