@@ -1,10 +1,19 @@
+$(document).bind("contextmenu",function(e){e.preventDefault();});
+
 var Q = Quintus({ development: true });
 
 Q.include("Sprites, Scenes, Input, UI, Touch, 2D, TMX");
 
-Q.gravityY = 0;
+//Q.gravityY = 0;
 
-Q.setup({ height: 400, width: 1000 }).touch();
+var gameSpeed=1000;
+var timestamp = new Date(); 
+var milliseconds = timestamp.getTime();
+//var lasttime=0;
+
+Q.setup({ height: 400, width: 1000 }).touch(); //is this right now that I've maximized it?
+
+//Q.setup({ maximize: true});
 
 Q.input.keyboardControls({
     9: "tab",
@@ -254,7 +263,11 @@ Q.scene('battle', function(stage) {
 
     joe = stage.insert(new Q.Engineer({x: 0, y: 0 }));
     ally = stage.insert(new Q.Angel({x: 10, y: 1 }));
-    ted = stage.insert(new Q.Archer({x: 20, y: 2 }));
+    //ted = stage.insert(new Q.Archer({x: 20, y: 2 }));
+	joe.p.x=1800;
+	joe.p.y=800;
+	ally.p.x=2000;
+	ally.p.y=1150;
 	
     stage.add("viewport");
     stage.add("stageTouchHandler");
