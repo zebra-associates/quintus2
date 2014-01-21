@@ -10,7 +10,8 @@ Q.input.keyboardControls({
     9: "tab",
     56: "zoomOut",
     57: "zoomIn",
-    58: "zoomReset"
+    58: "zoomReset",
+	16: "shift"
 });
 
 Q.controls();
@@ -282,14 +283,31 @@ Q.scene('battle', function(stage) {
 
     stage.on("step", function(dt) {
         if( Q.inputs['left'] ) {
-            stage.viewport.x -= SCROLL_VELOCITY;
+			if( Q.inputs['shift'] ) {
+				stage.viewport.x-= SCROLL_VELOCITY*2.5;
+			}else
+			{
+				stage.viewport.x -= SCROLL_VELOCITY;
+			}
         } else if( Q.inputs['right'] ) {
-            stage.viewport.x += SCROLL_VELOCITY;
-        } 
+			if( Q.inputs['shift'] ) {
+				stage.viewport.x += SCROLL_VELOCITY;
+			}else {
+				stage.viewport.x += SCROLL_VELOCITY*2.5;
+			}
+        } 		
         if( Q.inputs['up'] ) {
-            stage.viewport.y -= SCROLL_VELOCITY;
+			if( Q.inputs['shift'] ) {
+				stage.viewport.y -= SCROLL_VELOCITY;
+			}else{
+				stage.viewport.y -= SCROLL_VELOCITY*2.5;
+			}
         } else if( Q.inputs['down'] ) {
-            stage.viewport.y += SCROLL_VELOCITY;
+			if( Q.inputs['shift'] ) {
+				stage.viewport.y += SCROLL_VELOCITY;
+			}else {
+				stage.viewport.y += SCROLL_VELOCITY*2.5;
+			}
         } 
     });
 });
