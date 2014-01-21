@@ -208,10 +208,10 @@ Q.scene('active_unit_actions', function(stage) {
 
 Q.scene('battle', function(stage) {
 
-    Q.stageTMX("test1.tmx", stage);
+    Q.stageTMX("test5.tmx", stage);
 
-    var joe = stage.insert(new Q.Engineer({x: 6450, y: 1400 }));
-    var ally = stage.insert(new Q.Angel({x: 9050, y: 1400 }));
+    var joe = stage.insert(new Q.Engineer({x: 1450, y: 1400 }));
+    var ally = stage.insert(new Q.Angel({x: 2050, y: 400 }));
 
     stage.add("viewport");
     stage.add("stageTouchHandler");
@@ -252,7 +252,7 @@ Q.scene('battle', function(stage) {
     });
 });
 
-Q.loadTMX("test1.tmx", function() {
+Q.loadTMX("test5.tmx", function() {
     Q.load(["archer.png", "engineer.png", "angel.png"], function() {
         Q.stageScene('battle');
         Q.stageScene('active_unit_actions', 2);
