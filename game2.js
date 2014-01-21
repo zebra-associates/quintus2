@@ -306,7 +306,6 @@ Q.scene('battle', function(stage) {
     stage.on("step", function(dt) {
 		monsta.update();
 		monsta.draw(Q.ctx,stage.viewport);
-		console.log("catpenis");
         if( Q.inputs['left'] ) {
 			if( Q.inputs['shift'] ) {
 				stage.viewport.x-= SCROLL_VELOCITY*2.5;
