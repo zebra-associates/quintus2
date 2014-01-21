@@ -2,7 +2,7 @@ var Q = Quintus({ development: true });
 
 Q.include("Sprites, Scenes, Input, UI, Touch, 2D, TMX");
 
-//Q.gravityY = 0;
+Q.gravityY = 0;
 
 Q.setup({ height: 400, width: 1000 }).touch();
 
@@ -251,12 +251,13 @@ Q.scene('battle', function(stage) {
 
     Q.stageTMX("test6.tmx", stage);
 
-    joe = stage.insert(new Q.Engineer({x: 1450, y: 1400 }));
-    ally = stage.insert(new Q.Angel({x: 1650, y: 0 }));
-
+    joe = stage.insert(new Q.Engineer({x: 0, y: 0 }));
+    ally = stage.insert(new Q.Angel({x: 10, y: 1 }));
+    ted = stage.insert(new Q.Archer({x: 20, y: 2 }));
+	
     stage.add("viewport");
     stage.add("stageTouchHandler");
-
+	
     Q.input.on("zoomOut", function() {
         stage.viewport.scale *= 0.5;
     });
