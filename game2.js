@@ -249,7 +249,7 @@ Q.scene('active_unit_actions', function(stage) {
 
 Q.scene('battle', function(stage) {
 
-    Q.stageTMX("test5.tmx", stage);
+    Q.stageTMX("test6.tmx", stage);
 
     joe = stage.insert(new Q.Engineer({x: 1450, y: 1400 }));
     ally = stage.insert(new Q.Angel({x: 1650, y: 0 }));
@@ -293,7 +293,7 @@ Q.scene('battle', function(stage) {
     });
 });
 
-Q.loadTMX("test5.tmx", function() {
+Q.loadTMX("test6.tmx", function() {
     Q.load(["archer.png", "engineer.png", "angel.png"], function() {
         Q.stageScene('battle');
         Q.stageScene('active_unit_actions', 2);
