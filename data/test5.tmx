@@ -20008,9 +20008,9 @@
   </data>
  </layer>
  <layer name="Main" width="200" height="100" opacity="0.9">
-  <properties>
-   <property name="collision" value="true"/>
-  </properties>
+   <properties>
+     <property name="collision" value="true"/>
+   </properties>
   <data>
    <tile gid="0"/>
    <tile gid="0"/>
