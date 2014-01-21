@@ -95,7 +95,9 @@ Q.Sprite.extend("Unit", {
       var obj = e.obj;
       if( obj == Q.stage()._collisionLayers[0] ) {
           var pos = this.getTilePosition();
-          if( obj.getTile(pos.x, pos.y - 1) === null
+          if( this.directionX() == 0
+              &&
+              obj.getTile(pos.x, pos.y - 1) === null
               && 
               obj.getTile(pos.x + dir, pos.y - 1) === null ) {
               this.p.vy = this.p.speed / -2;
@@ -138,6 +140,9 @@ Q.Sprite.extend("Unit", {
       }
   },
   setDestination: function(dest) {
+      this.p.climbing = false;
+      this.p.gravity = 1;
+      this.p.vy = 0;
       this.p.destination = dest;
   },
   stop: function() {
