@@ -259,6 +259,9 @@ Q.scene('battle', function(stage) {
     stage.add("viewport");
     stage.add("stageTouchHandler");
 	
+	stage.viewport.x=1000;
+	stage.viewport.y=1000;
+	
     Q.input.on("zoomOut", function() {
         stage.viewport.scale *= 0.5;
     });
@@ -291,22 +294,22 @@ Q.scene('battle', function(stage) {
 			}
         } else if( Q.inputs['right'] ) {
 			if( Q.inputs['shift'] ) {
-				stage.viewport.x += SCROLL_VELOCITY;
-			}else {
 				stage.viewport.x += SCROLL_VELOCITY*2.5;
+			}else {
+				stage.viewport.x += SCROLL_VELOCITY;
 			}
         } 		
         if( Q.inputs['up'] ) {
 			if( Q.inputs['shift'] ) {
-				stage.viewport.y -= SCROLL_VELOCITY;
-			}else{
 				stage.viewport.y -= SCROLL_VELOCITY*2.5;
+			}else{
+				stage.viewport.y -= SCROLL_VELOCITY;
 			}
         } else if( Q.inputs['down'] ) {
 			if( Q.inputs['shift'] ) {
-				stage.viewport.y += SCROLL_VELOCITY;
-			}else {
 				stage.viewport.y += SCROLL_VELOCITY*2.5;
+			}else {
+				stage.viewport.y += SCROLL_VELOCITY;
 			}
         } 
     });
