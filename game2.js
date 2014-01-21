@@ -1,4 +1,8 @@
-$(document).bind("contextmenu",function(e){e.preventDefault();});
+var CANVAS_WIDTH=1000;
+var CANVAS_HEIGHT=400; //todo
+var bColors = ["#008000","#006400", "#FF4500", "#000080", "#696969", "#800080", "#808000", "#A52A2A", "#8B4513", "#FFDEAD", "#FFFF40","#000080" , "#FFFF80"]; //list 
+
+$(document).bind("contextmenu",function(e){e.preventDefault(); monsta.startOrbit(40000,Math.floor(Math.random()*CANVAS_WIDTH),Math.floor(Math.random()*CANVAS_HEIGHT),60);});
 
 var Q = Quintus({ development: true });
 
@@ -37,6 +41,8 @@ var DEFAULT_BUTTONS = [];
     {label: "F"}
 ];
 */
+
+var monsta= new particleSystem();
 
 // component by Jacques Dés Prés
 // https://plus.google.com/103224258695442602351/posts/UqpvNcCJo6Y
@@ -298,6 +304,9 @@ Q.scene('battle', function(stage) {
     Q.input.on("up", stage, "unfollow");
 
     stage.on("step", function(dt) {
+		monsta.update();
+		monsta.draw(Q.ctx,stage.viewport);
+		console.log("catpenis");
         if( Q.inputs['left'] ) {
 			if( Q.inputs['shift'] ) {
 				stage.viewport.x-= SCROLL_VELOCITY*2.5;
