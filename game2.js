@@ -15,7 +15,7 @@ var timestamp = new Date();
 var milliseconds = timestamp.getTime();
 //var lasttime=0;
 
-Q.setup({ height: 400, width: 1000 }).touch(); //is this right now that I've maximized it?
+Q.setup({ height: CANVAS_HEIGHT, width: CANVAS_WIDTH }).touch(); 
 
 //Q.setup({ maximize: true});
 
@@ -265,7 +265,7 @@ Q.scene('active_unit_actions', function(stage) {
 
 Q.scene('battle', function(stage) {
 
-    Q.stageTMX("test6.tmx", stage);
+    Q.stageTMX("test7.tmx", stage);
 
     joe = stage.insert(new Q.Engineer({x: 0, y: 0 }));
     ally = stage.insert(new Q.Angel({x: 10, y: 1 }));
@@ -336,7 +336,7 @@ Q.scene('battle', function(stage) {
     });
 });
 
-Q.loadTMX("test6.tmx", function() {
+Q.loadTMX("test7.tmx", function() {
     Q.load(["archer.png", "engineer.png", "angel.png"], function() {
         Q.stageScene('battle');
         Q.stageScene('active_unit_actions', 2);
