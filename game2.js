@@ -14,6 +14,8 @@ var gameSpeed=1000;
 var timestamp = new Date(); 
 var milliseconds = timestamp.getTime();
 //var lasttime=0;
+var maximized=false;
+var paused=false;
 
 Q.setup({ height: CANVAS_HEIGHT, width: CANVAS_WIDTH }).touch(); 
 
@@ -24,7 +26,22 @@ Q.input.keyboardControls({
     56: "zoomOut",
     57: "zoomIn",
     58: "zoomReset",
-	16: "shift"
+	16: "shift",
+	77: "m",
+	32: "space",
+	191: "fslash"
+});
+
+Q.input.touchControls({
+  controls:  [ ['left','<' ],
+               ['right','>' ],
+			   ['up','^' ],
+               ['down','\/' ],
+               [],
+               ['action','b'],
+               ['fire', 'a' ],
+			   [],[]
+			   ]
 });
 
 Q.controls();
@@ -305,7 +322,30 @@ Q.scene('battle', function(stage) {
 
     stage.on("step", function(dt) {
 		monsta.update();
-		monsta.draw(Q.ctx,stage.viewport);
+		//monsta.draw(Q.ctx,stage.viewport);
+		if(Q.inputs['fslash']) {
+			if(!paused) {
+				//Q.pauseGame();
+				//Q.stage().pause();
+				paused=true;
+				console.log("catpenis");
+			}else{
+				//Q.unpauseGame();
+				//Q.stage().unPause();
+				paused=false;
+			}
+			
+		}
+		if(Q.inputs['m']){
+			if(maximized){
+				//Q.setup({ height: CANVAS_HEIGHT, width: CANVAS_WIDTH });  //not working
+				//maximized=false;
+				//Q.setup({ maximize: false});
+			}else{
+				Q.setup({ maximize: true});
+				maximized=true;
+			}
+		}
         if( Q.inputs['left'] ) {
 			if( Q.inputs['shift'] ) {
 				stage.viewport.x-= SCROLL_VELOCITY*2.5;
