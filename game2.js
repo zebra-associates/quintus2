@@ -106,11 +106,22 @@ Q.touchTilePos = function(touch) {
     };
 };
 
+Q.TileLayer.extend("TerrainLayer");
+
+Q.Sprite.extend("GenericObject", {
+  init: function(p) {
+      console.log(p);
+    this._super(p, {sensor: true,
+                    sheet: p.sprite
+                   });
+  }
+});
+
 Q.Sprite.extend("Unit", {
   init: function(p, d) {
       var defaults = {
           buttons: DEFAULT_BUTTONS,
-          speed: 20,
+          speed: 200,
           climbing: null
       };
       Q._defaults(d, defaults);
@@ -126,7 +137,7 @@ Q.Sprite.extend("Unit", {
   },
   foo: function(e, dir) {
       var obj = e.obj;
-      if( obj == Q.stage()._collisionLayers[0] ) {
+      if( obj instanceof Q.TerrainLayer ) {
           var pos = this.getTilePosition();
           if( this.directionX() == 0
               &&
@@ -283,16 +294,25 @@ Q.scene('active_unit_actions', function(stage) {
 
 Q.scene('battle', function(stage) {
 
-    Q.stageTMX("test8.tmx", stage);
+    stage.options.gridW = 150;
+    stage.options.gridH = 100;
 
-    joe = stage.insert(new Q.Engineer({x: 0, y: 0 }));
-    ally = stage.insert(new Q.Angel({x: 10, y: 1 }));
+    Q.stageTMX("test9.tmx", stage);
+
+    var things = stage.items[1];
+
+//    stage.remove(things);
+
+    joe = stage.insert(new Q.Engineer({x: 32 + 16, y: 32 * 42 + 16 }));
+    ally = stage.insert(new Q.Angel({x: 32 * 50 + 16, y: 32 * 42 + 16 }));
     //ted = stage.insert(new Q.Archer({x: 20, y: 2 }));
-	joe.p.x=1800;
-	joe.p.y=800;
-	ally.p.x=2000;
-	ally.p.y=1150;
-	
+//	joe.p.x=1800;
+//	joe.p.y=800;
+//	ally.p.x=2000;
+//	ally.p.y=1150;
+
+//    stage.insert(things);
+
     stage.add("viewport");
     stage.add("stageTouchHandler");
 	
@@ -378,8 +398,9 @@ Q.scene('battle', function(stage) {
     });
 });
 
-Q.loadTMX("test8.tmx", function() {
+Q.loadTMX("test9.tmx, things.json", function() {
     Q.load(["archer.png", "engineer.png", "angel.png"], function() {
+        Q.compileSheets("things.png", "things.json");
         Q.stageScene('battle');
         Q.stageScene('active_unit_actions', 2);
     });
