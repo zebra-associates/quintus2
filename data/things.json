@@ -1,167 +1,44 @@
 {
-  "bridgemiddle":{ "sx":32, "sy":0, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 }
-}
-
-{
-  "bridgerightend":{ "sx":64, "sy":0, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 }
-}
-
-{
-  "bullshit1":{ "sx":96, "sy":0, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 }
-}
-
-{
-  "treetop1":{ "sx":128, "sy":0, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 }
-}
-
-{
-  "iceicle1":{ "sx":224, "sy":0, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 }
-}
-
-{
-  "treebase":{ "sx":128, "sy":64, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 }
-}
-
-{
-  "treemidhole":{ "sx":128, "sy":32, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 }
-}
-
-{
-  "treemidsolid":{ "sx":224, "sy":32, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 }
-}
-
-{
-  "desertgrass":{ "sx":160, "sy":64, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 }
-}
-
-{
-  "chair1":{ "sx":256, "sy":32, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 }
-}
-
-{
-  "chair2":{ "sx":288, "sy":32, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 }
-}
-
-{
-  "chestopen":{ "sx":192, "sy":64, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 }
-}
-
-{
-  "treetop2":{ "sx":224, "sy":64, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 }
-}
-
-{
-  "ropelefttop":{ "sx":128, "sy":96, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 }
-}
-
-{
-  "roperighttop":{ "sx":160, "sy":96, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 }
-}
-
-{
-  "ropeleftmiddle":{ "sx":128, "sy":128, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 }
-}
-
-{
-  "roperightmiddle":{ "sx":160, "sy":128, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 }
-}
-
-{
-  "roperightbottom":{ "sx":160, "sy":160, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 }
-}
-
-{
-  "ropeleftbottom":{ "sx":128, "sy":160, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 }
-}
-
-{
-  "dooropen":{ "sx":0, "sy":160, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 }
-}
-
-{
-  "doorclosed":{ "sx":32, "sy":160, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 }
-}
-
-{
-  "ladder":{ "sx":64, "sy":160, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 }
-}
-
-{
-  "grass4":{ "sx":96, "sy":160, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 }
-}
-
-{
-  "bush1":{ "sx":0, "sy":192, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 }
-}
-
-{
-  "grass1":{ "sx":32, "sy":192, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 }
-}
-
-{
-  "grass2":{ "sx":64, "sy":192, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 }
-}
-
-{
-  "grass3":{ "sx":96, "sy":192, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 }
-}
-
-{
-  "mushroom":{ "sx":0, "sy":192, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 }
-}
-
-{
-  "mushrooms":{ "sx":32, "sy":192, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 }
-}
-
-{
-  "bridgeleftend":{ "sx":64, "sy":192, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 }
-}
-
-{
-  "smallwindow":{ "sx":96, "sy":192, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 }
-}
-
-{
-  "chest":{ "sx":0, "sy":224, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 }
-}
-
-{
-  "stump":{ "sx":32, "sy":224, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 }
-}
-
-{
-  "fronttorch":{ "sx":96, "sy":224, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 }
-}
-
-{
-  "lefttorch":{ "sx":192, "sy":224, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 }
-}
-
-{
-  "righttorch":{ "sx":224, "sy":224, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 }
-}
-
-{
-  "iceplatform":{ "sx":0, "sy":256, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 }
-}
-
-{
-  "bottle1":{ "sx":32, "sy":256, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 }
-}
-
-{
-  "barrel":{ "sx":64, "sy":256, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 }
-}
-
-{
-  "bottle2":{ "sx":96, "sy":256, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 }
-}
-
-{
-  "grave":{ "sx":128, "sy":256, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 }
-}
-
-{
+  "bridgemiddle":{ "sx":32, "sy":0, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 },
+  "bridgerightend":{ "sx":64, "sy":0, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 },
+  "bullshit1":{ "sx":96, "sy":0, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 },
+  "treetop1":{ "sx":128, "sy":0, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 },
+  "iceicle1":{ "sx":224, "sy":0, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 },
+  "treebase":{ "sx":128, "sy":64, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 },
+  "treemidhole":{ "sx":128, "sy":32, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 },
+  "treemidsolid":{ "sx":224, "sy":32, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 },
+  "desertgrass":{ "sx":160, "sy":64, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 },
+  "chair1":{ "sx":256, "sy":32, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 },
+  "chair2":{ "sx":288, "sy":32, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 },
+  "chestopen":{ "sx":192, "sy":64, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 },
+  "treetop2":{ "sx":224, "sy":64, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 },
+  "ropelefttop":{ "sx":128, "sy":96, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 },
+  "roperighttop":{ "sx":160, "sy":96, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 },
+  "ropeleftmiddle":{ "sx":128, "sy":128, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 },
+  "roperightmiddle":{ "sx":160, "sy":128, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 },
+  "roperightbottom":{ "sx":160, "sy":160, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 },
+  "ropeleftbottom":{ "sx":128, "sy":160, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 },
+  "dooropen":{ "sx":0, "sy":160, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 },
+  "doorclosed":{ "sx":32, "sy":160, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 },
+  "ladder":{ "sx":64, "sy":160, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 },
+  "grass4":{ "sx":96, "sy":160, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 },
+  "bush1":{ "sx":0, "sy":192, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 },
+  "grass1":{ "sx":32, "sy":192, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 },
+  "grass2":{ "sx":64, "sy":192, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 },
+  "grass3":{ "sx":96, "sy":192, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 },
+  "mushroom":{ "sx":0, "sy":192, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 },
+  "mushrooms":{ "sx":32, "sy":192, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 },
+  "bridgeleftend":{ "sx":64, "sy":192, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 },
+  "smallwindow":{ "sx":96, "sy":192, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 },
+  "chest":{ "sx":0, "sy":224, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 },
+  "stump":{ "sx":32, "sy":224, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 },
+  "fronttorch":{ "sx":96, "sy":224, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 },
+  "lefttorch":{ "sx":192, "sy":224, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 },
+  "righttorch":{ "sx":224, "sy":224, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 },
+  "iceplatform":{ "sx":0, "sy":256, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 },
+  "bottle1":{ "sx":32, "sy":256, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 },
+  "barrel":{ "sx":64, "sy":256, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 },
+  "bottle2":{ "sx":96, "sy":256, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 },
+  "grave":{ "sx":128, "sy":256, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 },
   "fence":{ "sx":0, "sy":288, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 }
 }
