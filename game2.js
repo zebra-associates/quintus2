@@ -245,7 +245,8 @@ Q.scene('active_unit_actions', function(stage) {
         stage.insert(new Q.UI.Text({label: "No unit is selected",
                                     y: Q.height - 50,
                                     x: Q.width / 2,
-                                    size: 16,
+                                    size: 34,
+									family: "Times New Roman",
                                     weight: 400
                                    }));
         return;
@@ -343,6 +344,7 @@ Q.scene('battle', function(stage) {
 				//Q.setup({ maximize: false});
 			}else{
 				Q.setup({ maximize: true});
+				Q.stageScene('active_unit_actions', 2, {unit: stage.viewport.following});
 				maximized=true;
 			}
 		}
