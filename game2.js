@@ -122,7 +122,9 @@ Q.Sprite.extend("Unit", {
       var defaults = {
           buttons: DEFAULT_BUTTONS,
           speed: 200,
-          climbing: null
+          climbing: null,
+          type: 2,
+          collisionMask: 1
       };
       Q._defaults(d, defaults);
       this._super(p, d);
