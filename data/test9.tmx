@@ -30279,7 +30279,7 @@
    <tile gid="20"/>
   </data>
  </layer>
- <layer name="Terrain" width="150" height="100">
+ <layer name="Terrain" width="150" height="100" visible="0">
   <properties>
    <property name="Class" value="TerrainLayer"/>
    <property name="collision" value="true"/>
@@ -45287,7 +45287,7 @@
    <tile gid="229"/>
   </data>
  </layer>
- <layer name="Things" width="150" height="100">
+ <layer name="Things" width="150" height="100" visible="0">
   <properties>
    <property name="collision" value="true"/>
    <property name="collisionMask" value="0"/>
