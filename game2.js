@@ -259,6 +259,7 @@ Q.scene('active_unit_actions', function(stage) {
                                     y: Q.height - 50,
                                     x: Q.width / 2,
                                     size: 34,
+									color: "rgba(255,220,45,0.8)",
 									family: "Times New Roman",
                                     weight: 400
                                    }));
