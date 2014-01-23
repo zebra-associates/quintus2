@@ -261,7 +261,7 @@
  <tileset firstgid="165" name="textset1" tilewidth="32" tileheight="32">
   <image source="../images/textset1.png" width="320" height="256"/>
  </tileset>
- <layer name="back" width="150" height="100">
+ <layer name="back" width="150" height="100" visible="0">
   <properties>
    <property name="collision" value="true"/>
    <property name="collisionMask" value="0"/>
@@ -15270,7 +15270,7 @@
    <tile gid="0"/>
   </data>
  </layer>
- <layer name="Sky" width="150" height="100">
+ <layer name="Sky" width="150" height="100" visible="0">
   <properties>
    <property name="collision" value="true"/>
    <property name="collisionMask" value="0"/>
@@ -51692,6 +51692,7 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="85"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -51734,7 +51735,6 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="85"/>
-   <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -60327,7 +60327,6 @@
   <object gid="89" x="2242" y="1379"/>
   <object gid="79" x="2242" y="1351"/>
   <object gid="69" x="2242" y="1320"/>
-  <object gid="85" x="2707" y="1376"/>
   <object gid="115" x="4351" y="1378"/>
   <object gid="115" x="4041" y="1377"/>
   <object gid="117" x="3904" y="1377"/>
