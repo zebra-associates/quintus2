@@ -15,11 +15,11 @@
  <tileset firstgid="165" name="textset1" tilewidth="32" tileheight="32">
   <image source="../images/textset1.png" width="320" height="256"/>
  </tileset>
- <layer name="back" width="150" height="100">
+ <layer name="back" width="150" height="100" visible="0">
   <properties>
    <property name="collision" value="true"/>
-   <property name="type" value="0"/>
    <property name="collisionMask" value="0"/>
+   <property name="type" value="0"/>
   </properties>
   <data>
    <tile gid="174"/>
@@ -15024,11 +15024,11 @@
    <tile gid="0"/>
   </data>
  </layer>
- <layer name="Sky" width="150" height="100">
+ <layer name="Sky" width="150" height="100" visible="0">
   <properties>
    <property name="collision" value="true"/>
-   <property name="type" value="0"/>
    <property name="collisionMask" value="0"/>
+   <property name="type" value="0"/>
   </properties>
   <data>
    <tile gid="29"/>
@@ -30033,10 +30033,10 @@
    <tile gid="20"/>
   </data>
  </layer>
- <layer name="Terrain" width="150" height="100">
+ <layer name="Terrain" width="150" height="100" visible="0">
   <properties>
-   <property name="collision" value="true"/>
    <property name="Class" value="TerrainLayer"/>
+   <property name="collision" value="true"/>
   </properties>
   <data>
    <tile gid="0"/>
@@ -45044,8 +45044,8 @@
  <layer name="Things" width="150" height="100">
   <properties>
    <property name="collision" value="true"/>
-   <property name="type" value="0"/>
    <property name="collisionMask" value="0"/>
+   <property name="type" value="0"/>
   </properties>
   <data>
    <tile gid="0"/>
@@ -51367,7 +51367,7 @@
    <tile gid="117"/>
    <tile gid="117"/>
    <tile gid="117"/>
-   <tile gid="126"/>
+   <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="127"/>
    <tile gid="66"/>
@@ -51428,7 +51428,7 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="126"/>
+   <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -60050,4 +60050,8 @@
    <tile gid="0"/>
   </data>
  </layer>
+ <objectgroup name="Object Layer 1" width="150" height="100">
+  <object gid="126" x="608" y="1376"/>
+  <object gid="126" x="2560" y="1376"/>
+ </objectgroup>
 </map>

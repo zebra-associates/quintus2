@@ -114,6 +114,10 @@ Q.Sprite.extend("GenericObject", {
     this._super(p, {sensor: true,
                     sheet: p.sprite
                    });
+    this.on("sensor");
+  },
+  sensor: function(collidedWith) {
+    console.log("collided with ", collidedWith);
   }
 });
 
