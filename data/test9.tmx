@@ -7,169 +7,169 @@
   <image source="../images/things.png" width="320" height="320"/>
   <tile id="1">
    <properties>
-    <property name="class" value="GenericObject"/>
+    <property name="Class" value="GenericObject"/>
     <property name="sprite" value="bridgemiddle"/>
    </properties>
   </tile>
   <tile id="2">
    <properties>
-    <property name="class" value="GenericObject"/>
+    <property name="Class" value="GenericObject"/>
     <property name="sprite" value="bridgerightend"/>
    </properties>
   </tile>
   <tile id="3">
    <properties>
-    <property name="class" value="GenericObject"/>
+    <property name="Class" value="GenericObject"/>
     <property name="sprite" value=""/>
    </properties>
   </tile>
   <tile id="4">
    <properties>
-    <property name="class" value="GenericObject"/>
+    <property name="Class" value="GenericObject"/>
     <property name="sprite" value="treetop1"/>
    </properties>
   </tile>
   <tile id="7">
    <properties>
-    <property name="class" value="GenericObject"/>
+    <property name="Class" value="GenericObject"/>
     <property name="sprite" value="icicle1"/>
    </properties>
   </tile>
   <tile id="14">
    <properties>
-    <property name="class" value="GenericObject"/>
+    <property name="Class" value="GenericObject"/>
     <property name="sprite" value="treemidhole"/>
    </properties>
   </tile>
   <tile id="17">
    <properties>
-    <property name="class" value="GenericObject"/>
+    <property name="Class" value="GenericObject"/>
     <property name="sprite" value="treemidsolid"/>
    </properties>
   </tile>
   <tile id="18">
    <properties>
-    <property name="class" value="GenericObject"/>
+    <property name="Class" value="GenericObject"/>
     <property name="sprite" value="chair1"/>
    </properties>
   </tile>
   <tile id="19">
    <properties>
-    <property name="class" value="GenericObject"/>
+    <property name="Class" value="GenericObject"/>
     <property name="sprite" value="chair2"/>
    </properties>
   </tile>
   <tile id="24">
    <properties>
-    <property name="class" value="GenericObject"/>
+    <property name="Class" value="GenericObject"/>
     <property name="sprite" value="treebase"/>
    </properties>
   </tile>
   <tile id="25">
    <properties>
-    <property name="class" value="GenericObject"/>
+    <property name="Class" value="GenericObject"/>
     <property name="sprite" value="desertgrass"/>
    </properties>
   </tile>
   <tile id="26">
    <properties>
-    <property name="class" value="GenericObject"/>
+    <property name="Class" value="GenericObject"/>
     <property name="sprite" value="chestopen"/>
    </properties>
   </tile>
   <tile id="27">
    <properties>
-    <property name="class" value="GenericObject"/>
+    <property name="Class" value="GenericObject"/>
     <property name="sprite" value="treetop2"/>
    </properties>
   </tile>
   <tile id="34">
    <properties>
-    <property name="class" value="GenericObject"/>
+    <property name="Class" value="GenericObject"/>
     <property name="sprite" value="ropelefttop"/>
    </properties>
   </tile>
   <tile id="35">
    <properties>
-    <property name="class" value="GenericObject"/>
+    <property name="Class" value="GenericObject"/>
     <property name="sprite" value="roperighttop"/>
    </properties>
   </tile>
   <tile id="40">
    <properties>
-    <property name="class" value="GenericObject"/>
+    <property name="Class" value="GenericObject"/>
     <property name="sprite" value="dooropen"/>
    </properties>
   </tile>
   <tile id="41">
    <properties>
-    <property name="class" value="GenericObject"/>
+    <property name="Class" value="GenericObject"/>
     <property name="sprite" value="doorclosed"/>
    </properties>
   </tile>
   <tile id="42">
    <properties>
-    <property name="class" value="GenericObject"/>
+    <property name="Class" value="GenericObject"/>
     <property name="sprite" value="ladder"/>
    </properties>
   </tile>
   <tile id="43">
    <properties>
-    <property name="class" value="GenericObject"/>
+    <property name="Class" value="GenericObject"/>
     <property name="sprite" value="grass4"/>
    </properties>
   </tile>
   <tile id="44">
    <properties>
-    <property name="class" value="GenericObject"/>
+    <property name="Class" value="GenericObject"/>
     <property name="sprite" value="ropeleftmiddle"/>
    </properties>
   </tile>
   <tile id="45">
    <properties>
-    <property name="class" value="GenericObject"/>
+    <property name="Class" value="GenericObject"/>
     <property name="sprite" value="roperightmiddle"/>
    </properties>
   </tile>
   <tile id="50">
    <properties>
-    <property name="class" value="GenericObject"/>
+    <property name="Class" value="GenericObject"/>
     <property name="sprite" value="bush"/>
    </properties>
   </tile>
   <tile id="51">
    <properties>
-    <property name="class" value="GenericObject"/>
+    <property name="Class" value="GenericObject"/>
     <property name="sprite" value="grass1"/>
    </properties>
   </tile>
   <tile id="52">
    <properties>
-    <property name="class" value="GenericObject"/>
+    <property name="Class" value="GenericObject"/>
     <property name="sprite" value="grass2"/>
    </properties>
   </tile>
   <tile id="53">
    <properties>
-    <property name="class" value="GenericObject"/>
+    <property name="Class" value="GenericObject"/>
     <property name="sprite" value="grass3"/>
    </properties>
   </tile>
   <tile id="54">
    <properties>
-    <property name="class" value="GenericObject"/>
+    <property name="Class" value="GenericObject"/>
     <property name="sprite" value="ropleftbottom"/>
    </properties>
   </tile>
   <tile id="55">
    <properties>
-    <property name="class" value="GenericObject"/>
+    <property name="Class" value="GenericObject"/>
     <property name="sprite" value="roperightbottom"/>
    </properties>
   </tile>
   <tile id="60">
    <properties>
-    <property name="class" value="GenericObject"/>
+    <property name="Class" value="GenericObject"/>
     <property name="sprite" value="mushroom"/>
    </properties>
   </tile>
@@ -181,79 +181,79 @@
   </tile>
   <tile id="62">
    <properties>
-    <property name="class" value="GenericObject"/>
+    <property name="Class" value="GenericObject"/>
     <property name="sprite" value="bridgeleftend"/>
    </properties>
   </tile>
   <tile id="63">
    <properties>
-    <property name="class" value="GenericObject"/>
+    <property name="Class" value="GenericObject"/>
     <property name="sprite" value="smallwindow"/>
    </properties>
   </tile>
   <tile id="70">
    <properties>
-    <property name="class" value="GenericObject"/>
+    <property name="Class" value="GenericObject"/>
     <property name="sprite" value="chest"/>
    </properties>
   </tile>
   <tile id="71">
    <properties>
-    <property name="class" value="GenericObject"/>
+    <property name="Class" value="GenericObject"/>
     <property name="sprite" value="stump"/>
    </properties>
   </tile>
   <tile id="73">
    <properties>
-    <property name="class" value="GenericObject"/>
+    <property name="Class" value="GenericObject"/>
     <property name="sprite" value="fronttorch"/>
    </properties>
   </tile>
   <tile id="76">
    <properties>
-    <property name="class" value="GenericObject"/>
+    <property name="Class" value="GenericObject"/>
     <property name="sprite" value="lefttorch"/>
    </properties>
   </tile>
   <tile id="77">
    <properties>
-    <property name="class" value="GenericObject"/>
+    <property name="Class" value="GenericObject"/>
     <property name="sprite" value="righttorch"/>
    </properties>
   </tile>
   <tile id="80">
    <properties>
-    <property name="class" value="GenericObject"/>
+    <property name="Class" value="GenericObject"/>
     <property name="sprite" value="iceplatform"/>
    </properties>
   </tile>
   <tile id="81">
    <properties>
-    <property name="class" value="GenericObject"/>
+    <property name="Class" value="GenericObject"/>
     <property name="sprite" value="bottle1"/>
    </properties>
   </tile>
   <tile id="82">
    <properties>
-    <property name="class" value="GenericObject"/>
+    <property name="Class" value="GenericObject"/>
     <property name="sprite" value="barrel"/>
    </properties>
   </tile>
   <tile id="83">
    <properties>
-    <property name="class" value="GenericObject"/>
+    <property name="Class" value="GenericObject"/>
     <property name="sprite" value="bottle2"/>
    </properties>
   </tile>
   <tile id="84">
    <properties>
-    <property name="class" value="GenericObject"/>
+    <property name="Class" value="GenericObject"/>
     <property name="sprite" value="grave"/>
    </properties>
   </tile>
   <tile id="90">
    <properties>
-    <property name="class" value="GenericObject"/>
+    <property name="Class" value="GenericObject"/>
     <property name="sprite" value="fence"/>
    </properties>
   </tile>
