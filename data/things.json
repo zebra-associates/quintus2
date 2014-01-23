@@ -20,7 +20,7 @@
   "ropeleftbottom":{ "sx":128, "sy":160, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 },
   "dooropen":{ "sx":0, "sy":160, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 },
   "doorclosed":{ "sx":32, "sy":160, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 },
-  "ladder":{ "sx":64, "sy":160, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 },
+  "ladder":{ "sx":64, "sy":128, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 },
   "grass4":{ "sx":96, "sy":160, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 },
   "bush1":{ "sx":0, "sy":192, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 },
   "grass1":{ "sx":32, "sy":192, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 },
