@@ -9,7 +9,7 @@ var Q = Quintus({ development: true });
 Q.include("Sprites, Scenes, Input, UI, Touch, 2D, TMX");
 
 //Q.gravityY = 0;
-function akey(k) {  //represents a keyboard button
+function akey(k) {  //represents a keyboard button  //convert to quintus?
     k = k || "space";
     this.key =k;
     this.aflag=false;
