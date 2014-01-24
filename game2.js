@@ -71,13 +71,13 @@ Q.input.keyboardControls({
 Q.input.touchControls({
   controls:  [ ['left','<' ],
                ['right','>' ],
-			   ['up','^' ],
+	       ['up','^' ],
                ['down','\/' ],
                [],
                ['action','b'],
                ['fire', 'a' ],
-			   [],[]
-			   ]
+	       [],[]
+	     ]
 });
 
 Q.controls();
