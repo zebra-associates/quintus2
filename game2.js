@@ -386,33 +386,32 @@ Q.scene('battle', function(stage) {
 
     stage.on("step", function(dt) {
         if( (Q.inputs['left']) ) {
-			if( Q.inputs['shift'] ) {
-				stage.viewport.x-= SCROLL_VELOCITY*2.5;
-			}else
-			{
-				stage.viewport.x -= SCROLL_VELOCITY;
-			}
+	    if( Q.inputs['shift'] ) {
+		stage.viewport.x-= SCROLL_VELOCITY*2.5;
+	    } else {
+		stage.viewport.x -= SCROLL_VELOCITY;
+	    }
         } else if( Q.inputs['right'] ) {
-			if( Q.inputs['shift'] ) {
-				stage.viewport.x += SCROLL_VELOCITY*2.5;
-			}else {
-				stage.viewport.x += SCROLL_VELOCITY;
-			}
+	    if( Q.inputs['shift'] ) {
+		stage.viewport.x += SCROLL_VELOCITY*2.5;
+	    } else {
+		stage.viewport.x += SCROLL_VELOCITY;
+	    }
         } 		
         if( Q.inputs['up'] ) {
-			if( Q.inputs['shift'] ) {
-				stage.viewport.y -= SCROLL_VELOCITY*2.5;
-			}else{
-				stage.viewport.y -= SCROLL_VELOCITY;
-			}
+	    if( Q.inputs['shift'] ) {
+		stage.viewport.y -= SCROLL_VELOCITY*2.5;
+	    } else{
+		stage.viewport.y -= SCROLL_VELOCITY;
+	    }
         } else if( Q.inputs['down'] ) {
-			if( Q.inputs['shift'] ) {
-				stage.viewport.y += SCROLL_VELOCITY*2.5;
-			}else {
-				stage.viewport.y += SCROLL_VELOCITY;
-			}
+	    if( Q.inputs['shift'] ) {
+		stage.viewport.y += SCROLL_VELOCITY*2.5;
+	    } else {
+		stage.viewport.y += SCROLL_VELOCITY;
+	    }
         } 
-	});
+    });
 });
 
 Q.loadTMX("test9.tmx, things.json", function() {
