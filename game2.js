@@ -41,17 +41,6 @@ var downkey=new akey("down");
 var leftkey=new akey("left");
 
 var gameSpeed=1000;
-var timestamp = new Date(); 
-var milliseconds = timestamp.getTime();
-var millisecondsL = timestamp.getTime();
-var millisecondsR = timestamp.getTime();
-var millisecondsU = timestamp.getTime();
-var millisecondsD = timestamp.getTime();
-var lastLeft=0;
-var lastRight=0;
-var lastUp=0;
-var lastDown=0;
-//var lasttime=0;
 
 Q.setup({ height: CANVAS_HEIGHT, width: CANVAS_WIDTH }).touch(); 
 
@@ -428,43 +417,6 @@ Q.scene('battle', function(stage) {
     Q.input.on("up", stage, "unfollow");
 
     stage.on("step", function(dt) {
-		//double tap jumps to edge of map.
-		if(leftkey.check()){
-			lastLeft=millisecondsL;
-			timestamp = new Date();
-			millisecondsL = timestamp.getTime();
-			if(millisecondsL-lastLeft<160) {
-				stage.viewport.x=-32;
-			}
-			
-		}
-		if(rightkey.check()){
-			lastRight=millisecondsR;
-			timestamp = new Date();
-			millisecondsR = timestamp.getTime();
-			if(millisecondsR-lastRight<160) {
-				stage.viewport.x=3870;
-			}
-			
-		}
-		if(upkey.check()){
-			lastUp=millisecondsU;
-			timestamp = new Date();
-			millisecondsU = timestamp.getTime();
-			if(millisecondsU-lastUp<160) {
-				stage.viewport.y=-32;
-			}
-			
-		}
-		if(downkey.check()){
-			lastDown=millisecondsD;
-			timestamp = new Date();
-			millisecondsD = timestamp.getTime();
-			if(millisecondsD-lastDown<160) {
-				stage.viewport.y=2820;
-			}
-			
-		}
         if( (Q.inputs['left']) ) {
 			if( Q.inputs['shift'] ) {
 				stage.viewport.x-= SCROLL_VELOCITY*2.5;
