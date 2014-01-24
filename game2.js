@@ -114,7 +114,7 @@ Q.component('stageTouchHandler', {
         });
     },
 
-    touch: function(e) {
+    touch: function(e) {  //smurfs
 
         // @@TODO very brittle. see button.touch below.
         if( typeof IN_BUTTON_PRESS != "undefined" && IN_BUTTON_PRESS ) return;
