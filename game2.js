@@ -9,10 +9,46 @@ var Q = Quintus({ development: true });
 Q.include("Sprites, Scenes, Input, UI, Touch, 2D, TMX");
 
 //Q.gravityY = 0;
+function akey(k) {  //represents a keyboard button
+    k = k || "space";
+    this.key =k;
+    this.aflag=false;
+    this.dflag=false;
+    this.check= function(){
+        if (keydown[this.key]) { 
+            this.aflag=true;
+            return false;
+        }
+        if((!keydown[this.key]) && (this.aflag===true)){
+            this.aflag=false;
+            return true;
+        }
+    };
+    this.checkDown= function(){
+        if ((keydown[this.key] )  && (!this.dflag)) { 
+            this.dflag=true;
+            return true;
+        }
+        if(!keydown[this.key]){
+            this.dflag=false;
+            return false;
+        }
+    };
+    return this;
+}
+
+var upkey=new akey("up");
+var rightkey=new akey("right");
+var downkey=new akey("down");
+var leftkey=new akey("left");
 
 var gameSpeed=1000;
 var timestamp = new Date(); 
 var milliseconds = timestamp.getTime();
+var lastLeft=0;
+var lastRight=0;
+var lastUp=0;
+var lastDown=0;
 //var lasttime=0;
 var maximized=false;
 var paused=false;
@@ -420,7 +456,44 @@ Q.scene('battle', function(stage) {
 				maximized=true;
 			}
 		}
-        if( Q.inputs['left'] ) {
+		//double tap jumps to edge of map.
+		if(leftkey.check()){
+			lastLeft=milliseconds;
+			timestamp = new Date();
+			milliseconds = timestamp.getTime();
+			if(milliseconds-lastLeft<160) {
+				stage.viewport.x=-32;
+			}
+			
+		}
+		if(rightkey.check()){
+			lastRight=milliseconds;
+			timestamp = new Date();
+			milliseconds = timestamp.getTime();
+			if(milliseconds-lastRight<160) {
+				stage.viewport.x=3870;
+			}
+			
+		}
+		if(upkey.check()){
+			lastUp=milliseconds;
+			timestamp = new Date();
+			milliseconds = timestamp.getTime();
+			if(milliseconds-lastUp<160) {
+				stage.viewport.y=-32;
+			}
+			
+		}
+		if(downkey.check()){
+			lastDown=milliseconds;
+			timestamp = new Date();
+			milliseconds = timestamp.getTime();
+			if(milliseconds-lastDown<160) {
+				stage.viewport.y=2820;
+			}
+			
+		}
+        if( (Q.inputs['left']) ) {
 			if( Q.inputs['shift'] ) {
 				stage.viewport.x-= SCROLL_VELOCITY*2.5;
 			}else
@@ -447,7 +520,7 @@ Q.scene('battle', function(stage) {
 				stage.viewport.y += SCROLL_VELOCITY;
 			}
         } 
-    });
+	});
 });
 
 Q.loadTMX("test9.tmx, things.json", function() {
