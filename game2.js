@@ -7,38 +7,6 @@ var Q = Quintus({ development: true });
 Q.include("Sprites, Scenes, Input, UI, Touch, 2D, TMX");
 
 //Q.gravityY = 0;
-function akey(k) {  //represents a keyboard button  //convert to quintus?
-    k = k || "space";
-    this.key =k;
-    this.aflag=false;
-    this.dflag=false;
-    this.check= function(){
-        if (keydown[this.key]) { 
-            this.aflag=true;
-            return false;
-        }
-        if((!keydown[this.key]) && (this.aflag===true)){
-            this.aflag=false;
-            return true;
-        }
-    };
-    this.checkDown= function(){
-        if ((keydown[this.key] )  && (!this.dflag)) { 
-            this.dflag=true;
-            return true;
-        }
-        if(!keydown[this.key]){
-            this.dflag=false;
-            return false;
-        }
-    };
-    return this;
-}
-
-var upkey=new akey("up");
-var rightkey=new akey("right");
-var downkey=new akey("down");
-var leftkey=new akey("left");
 
 var gameSpeed=1000;
 
