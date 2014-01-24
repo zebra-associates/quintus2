@@ -45,6 +45,10 @@ var leftkey=new akey("left");
 var gameSpeed=1000;
 var timestamp = new Date(); 
 var milliseconds = timestamp.getTime();
+var millisecondsL = timestamp.getTime();
+var millisecondsR = timestamp.getTime();
+var millisecondsU = timestamp.getTime();
+var millisecondsD = timestamp.getTime();
 var lastLeft=0;
 var lastRight=0;
 var lastUp=0;
@@ -458,37 +462,37 @@ Q.scene('battle', function(stage) {
 		}
 		//double tap jumps to edge of map.
 		if(leftkey.check()){
-			lastLeft=milliseconds;
+			lastLeft=millisecondsL;
 			timestamp = new Date();
-			milliseconds = timestamp.getTime();
-			if(milliseconds-lastLeft<160) {
+			millisecondsL = timestamp.getTime();
+			if(millisecondsL-lastLeft<160) {
 				stage.viewport.x=-32;
 			}
 			
 		}
 		if(rightkey.check()){
-			lastRight=milliseconds;
+			lastRight=millisecondsR;
 			timestamp = new Date();
-			milliseconds = timestamp.getTime();
-			if(milliseconds-lastRight<160) {
+			millisecondsR = timestamp.getTime();
+			if(millisecondsR-lastRight<160) {
 				stage.viewport.x=3870;
 			}
 			
 		}
 		if(upkey.check()){
-			lastUp=milliseconds;
+			lastUp=millisecondsU;
 			timestamp = new Date();
-			milliseconds = timestamp.getTime();
-			if(milliseconds-lastUp<160) {
+			millisecondsU = timestamp.getTime();
+			if(millisecondsU-lastUp<160) {
 				stage.viewport.y=-32;
 			}
 			
 		}
 		if(downkey.check()){
-			lastDown=milliseconds;
+			lastDown=millisecondsD;
 			timestamp = new Date();
-			milliseconds = timestamp.getTime();
-			if(milliseconds-lastDown<160) {
+			millisecondsD = timestamp.getTime();
+			if(millisecondsD-lastDown<160) {
 				stage.viewport.y=2820;
 			}
 			
