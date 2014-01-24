@@ -116,8 +116,26 @@ Q.Sprite.extend("GenericObject", {
                    });
     this.on("sensor");
   },
+  bump_top: function(collidedWith) {
+      collidedWith.p.gravity = 0;
+      collidedWith.p.vy = 0;
+      console.log('foo');
+  },
   sensor: function(collidedWith) {
-    console.log("collided with ", collidedWith);
+    if( this.p.sprite == "ladder" && collidedWith instanceof Q.Unit
+        &&
+        collidedWith.p.destination ) {
+        var y = collidedWith.p.destination.y,
+            delta = collidedWith.p.y - y; // not abs'ing; we only want to go up if we want to go up
+        foo = this;
+        if( delta > EPSILON ) {
+            collidedWith.p.climbing = true;
+            collidedWith.p.vy = collidedWith.p.speed / -2;
+            collidedWith.p.vx = 0;
+            collidedWith.p.lockX = Math.floor(this.p.x / 32) * 32 + 16;
+            collidedWith.p.gravity = 0;
+        }
+    }
   }
 });
 
@@ -125,10 +143,12 @@ Q.Sprite.extend("Unit", {
   init: function(p, d) {
       var defaults = {
           buttons: DEFAULT_BUTTONS,
-          speed: 200,
+          speed: 100,
           climbing: null,
           type: 2,
-          collisionMask: 1
+          collisionMask: 1,
+          destination: null,
+          lockX: null
       };
       Q._defaults(d, defaults);
       this._super(p, d);
@@ -165,6 +185,11 @@ Q.Sprite.extend("Unit", {
     return 0;
   },
   bumpBottom: function(e) {
+    if( e.obj instanceof Q.GenericObject && e.p.sprite == "bullshit1" ) {
+        console.log("foo");
+        this.p.gravity = 0;
+        this.p.vy = 0;
+    }
     if( this.p.climbing ) {
         this.p.gravity = 1;
         this.p.climbing = null;
@@ -172,23 +197,40 @@ Q.Sprite.extend("Unit", {
     }
   },
   step: function(dt) {
-      if( !this.p.destination ) {
-          return;
-      }
-      var x = this.p.destination.x,
-          y = this.p.destination.y;
-      var delta = Math.abs(this.p.x - x);
-      if( delta < EPSILON ) {
-          this.setDestination();
-          this.stop();
-          return;
-      }
-      if( x > this.p.x ) {
-          this.turnLeft();
-      } else {
-          this.turnRight();
-      }
-  },
+      var doStep = function() {
+          if( !this.p.destination ) {
+              return;
+          }
+          var x = this.p.destination.x,
+              y = this.p.destination.y;
+          var deltaX = Math.abs(this.p.x - x),
+              deltaY = Math.abs(this.p.y - y);
+          if( deltaX < EPSILON || deltaY < EPSILON ) {
+              if( deltaX < EPSILON ) {
+                  this.stop();
+                  x = this.p.x;
+              }
+              if( deltaX < EPSILON && deltaY < EPSILON ) {
+                  this.setDestination();
+                  return;
+              }
+          }
+
+          if( this.p.lockX != null ) {
+              this.p.x = this.p.lockX;
+              this.p.lockX = null;
+              this.p.vy = 0;
+          } else {
+              if( x > this.p.x ) {
+                  this.turnLeft();
+              } else if( x < this.p.x ) {
+                  this.turnRight();
+              }
+          }
+      };
+      doStep.bind(this)();
+      this.p.climbing = false;
+   },
   setDestination: function(dest) {
       this.p.climbing = false;
       this.p.gravity = 1;
@@ -197,6 +239,9 @@ Q.Sprite.extend("Unit", {
   },
   stop: function() {
       this.p.vx = 0;
+      if( this.p.destination ) {
+          this.p.destination.x = this.p.x;
+      }
   },
   turnLeft: function() {
       this.p.vx = this.p.speed;
