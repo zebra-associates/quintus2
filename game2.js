@@ -53,7 +53,6 @@ var lastUp=0;
 var lastDown=0;
 //var lasttime=0;
 var maximized=false;
-var paused=false;
 
 Q.setup({ height: CANVAS_HEIGHT, width: CANVAS_WIDTH }).touch(); 
 
@@ -430,19 +429,6 @@ Q.scene('battle', function(stage) {
     Q.input.on("up", stage, "unfollow");
 
     stage.on("step", function(dt) {
-		if(Q.inputs['fslash']) {
-			if(!paused) {
-				//Q.pauseGame();
-				//Q.stage().pause();
-				paused=true;
-				console.log("catpenis");
-			}else{
-				//Q.unpauseGame();
-				//Q.stage().unPause();
-				paused=false;
-			}
-			
-		}
 		if(Q.inputs['m']){
 			if(maximized){
 				//Q.setup({ height: CANVAS_HEIGHT, width: CANVAS_WIDTH });  //not working
