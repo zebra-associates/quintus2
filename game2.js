@@ -344,7 +344,7 @@ Q.scene('active_unit_actions', function(stage) {
     var active_unit = stage.options.unit;
 
     if( !active_unit ) {
-        stage.insert(new Q.UI.Text({label: "No unit is selected",
+        stage.insert(new Q.UI.Text({label: "No unit selected",
                                     y: Q.height - 50,
                                     x: Q.width / 2,
                                     size: 34,
@@ -395,7 +395,7 @@ Q.scene('battle', function(stage) {
 
 //    stage.remove(things);
 
-    joe = stage.insert(new Q.Engineer({x: 32 + 16, y: 32 * 42 + 16 }));
+    joe = stage.insert(new Q.Engineer({x: 32 * 6 + 16, y: 32 * 32 + 16 }));
     ally = stage.insert(new Q.Angel({x: 32 * 50 + 16, y: 32 * 42 + 16 }));
     //ted = stage.insert(new Q.Archer({x: 20, y: 2 }));
 //	joe.p.x=1800;
