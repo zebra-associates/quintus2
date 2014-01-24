@@ -387,7 +387,6 @@ Q.scene('battle', function(stage) {
     stage.on("step", function(dt) {
         var scroll_velocity = SCROLL_VELOCITY;
         if( Q.inputs['shift'] ) {
-            console.log('foo');
 	    scroll_velocity *= 2.5;
 	} 
 
