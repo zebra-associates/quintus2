@@ -62,10 +62,10 @@ Q.input.keyboardControls({
     56: "zoomOut",
     57: "zoomIn",
     58: "zoomReset",
-	16: "shift",
-	77: "m",
-	32: "space",
-	191: "fslash"
+    16: "shift",
+    77: "m",
+    32: "space",
+    191: "fslash"
 });
 
 Q.input.touchControls({
