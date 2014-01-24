@@ -385,31 +385,21 @@ Q.scene('battle', function(stage) {
     Q.input.on("up", stage, "unfollow");
 
     stage.on("step", function(dt) {
+        var scroll_velocity = SCROLL_VELOCITY;
+        if( Q.inputs['shift'] ) {
+            console.log('foo');
+	    scroll_velocity *= 2.5;
+	} 
+
         if( (Q.inputs['left']) ) {
-	    if( Q.inputs['shift'] ) {
-		stage.viewport.x-= SCROLL_VELOCITY*2.5;
-	    } else {
-		stage.viewport.x -= SCROLL_VELOCITY;
-	    }
-        } else if( Q.inputs['right'] ) {
-	    if( Q.inputs['shift'] ) {
-		stage.viewport.x += SCROLL_VELOCITY*2.5;
-	    } else {
-		stage.viewport.x += SCROLL_VELOCITY;
-	    }
+	    stage.viewport.x -= scroll_velocity;
+	} else if( Q.inputs['right'] ) {
+	    stage.viewport.x += scroll_velocity;
         } 		
         if( Q.inputs['up'] ) {
-	    if( Q.inputs['shift'] ) {
-		stage.viewport.y -= SCROLL_VELOCITY*2.5;
-	    } else{
-		stage.viewport.y -= SCROLL_VELOCITY;
-	    }
-        } else if( Q.inputs['down'] ) {
-	    if( Q.inputs['shift'] ) {
-		stage.viewport.y += SCROLL_VELOCITY*2.5;
-	    } else {
-		stage.viewport.y += SCROLL_VELOCITY;
-	    }
+	    stage.viewport.y -= scroll_velocity;
+	} else if( Q.inputs['down'] ) {
+	    stage.viewport.y += scroll_velocity;
         } 
     });
 });
