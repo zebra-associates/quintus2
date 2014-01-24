@@ -52,7 +52,6 @@ var lastRight=0;
 var lastUp=0;
 var lastDown=0;
 //var lasttime=0;
-var maximized=false;
 
 Q.setup({ height: CANVAS_HEIGHT, width: CANVAS_WIDTH }).touch(); 
 
@@ -429,17 +428,6 @@ Q.scene('battle', function(stage) {
     Q.input.on("up", stage, "unfollow");
 
     stage.on("step", function(dt) {
-		if(Q.inputs['m']){
-			if(maximized){
-				//Q.setup({ height: CANVAS_HEIGHT, width: CANVAS_WIDTH });  //not working
-				//maximized=false;
-				//Q.setup({ maximize: false});
-			}else{
-				Q.setup({ maximize: true});
-				Q.stageScene('active_unit_actions', 2, {unit: stage.viewport.following});
-				maximized=true;
-			}
-		}
 		//double tap jumps to edge of map.
 		if(leftkey.check()){
 			lastLeft=millisecondsL;
