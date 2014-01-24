@@ -20,7 +20,7 @@
   <tile id="3">
    <properties>
     <property name="Class" value="GenericObject"/>
-    <property name="sprite" value=""/>
+    <property name="sprite" value="bullshit1"/>
    </properties>
   </tile>
   <tile id="4">
@@ -33,6 +33,24 @@
    <properties>
     <property name="Class" value="GenericObject"/>
     <property name="sprite" value="icicle1"/>
+   </properties>
+  </tile>
+  <tile id="11">
+   <properties>
+    <property name="Class" value="GenericObject"/>
+    <property name="sprite" value="bullshit2"/>
+   </properties>
+  </tile>
+  <tile id="12">
+   <properties>
+    <property name="Class" value="GenericObject"/>
+    <property name="sprite" value="bullshit3"/>
+   </properties>
+  </tile>
+  <tile id="13">
+   <properties>
+    <property name="Class" value="GenericObject"/>
+    <property name="sprite" value="bullshit4"/>
    </properties>
   </tile>
   <tile id="14">
@@ -261,7 +279,7 @@
  <tileset firstgid="165" name="textset1" tilewidth="32" tileheight="32">
   <image source="../images/textset1.png" width="320" height="256"/>
  </tileset>
- <layer name="back" width="150" height="100" visible="0">
+ <layer name="back" width="150" height="100">
   <properties>
    <property name="collision" value="true"/>
    <property name="collisionMask" value="0"/>
@@ -30279,7 +30297,7 @@
    <tile gid="20"/>
   </data>
  </layer>
- <layer name="Terrain" width="150" height="100" visible="0">
+ <layer name="Terrain" width="150" height="100">
   <properties>
    <property name="Class" value="TerrainLayer"/>
    <property name="collision" value="true"/>
@@ -45287,7 +45305,7 @@
    <tile gid="229"/>
   </data>
  </layer>
- <layer name="Things" width="150" height="100" visible="0">
+ <layer name="Things" width="150" height="100">
   <properties>
    <property name="collision" value="true"/>
    <property name="collisionMask" value="0"/>
@@ -51030,17 +51048,7 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="78"/>
-   <tile gid="78"/>
-   <tile gid="78"/>
-   <tile gid="78"/>
-   <tile gid="78"/>
-   <tile gid="78"/>
-   <tile gid="78"/>
-   <tile gid="78"/>
    <tile gid="0"/>
-   <tile gid="78"/>
-   <tile gid="78"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -51332,10 +51340,6 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="76"/>
-   <tile gid="76"/>
-   <tile gid="76"/>
-   <tile gid="76"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -51483,8 +51487,22 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="77"/>
-   <tile gid="68"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -60345,5 +60363,20 @@
   <object gid="66" x="735" y="1378"/>
   <object gid="66" x="703" y="1378"/>
   <object gid="127" x="671" y="1378"/>
+  <object gid="78" x="1440" y="1248"/>
+  <object gid="78" x="1472" y="1248"/>
+  <object gid="78" x="1376" y="1248"/>
+  <object gid="78" x="1312" y="1248"/>
+  <object gid="78" x="1344" y="1248"/>
+  <object gid="78" x="1280" y="1248"/>
+  <object gid="78" x="1248" y="1248"/>
+  <object gid="78" x="1216" y="1248"/>
+  <object gid="78" x="1152" y="1248"/>
+  <object gid="78" x="1184" y="1248"/>
+  <object gid="77" x="1280" y="1344"/>
+  <object gid="76" x="1216" y="1312"/>
+  <object gid="76" x="1248" y="1312"/>
+  <object gid="76" x="1280" y="1312"/>
+  <object gid="68" x="1216" y="1344"/>
  </objectgroup>
 </map>
