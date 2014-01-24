@@ -210,7 +210,6 @@ Q.Sprite.extend("Unit", {
           if( this.p.lockX != null ) {
               this.p.x = this.p.lockX;
               this.p.lockX = null;
-              this.p.vy = 0;
           } else {
               if( x > this.p.x ) {
                   this.turnLeft();
