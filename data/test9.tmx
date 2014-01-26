@@ -297,6 +297,9 @@
  <tileset firstgid="165" name="textset1" tilewidth="32" tileheight="32">
   <image source="../images/textset1.png" width="320" height="256"/>
  </tileset>
+ <tileset firstgid="245" name="headsonsticks" tilewidth="32" tileheight="32">
+  <image source="../images/headsonsticks.png" width="256" height="32"/>
+ </tileset>
  <layer name="back" width="150" height="100">
   <properties>
    <property name="collision" value="true"/>
@@ -49879,6 +49882,7 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="247"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -50186,11 +50190,10 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="248"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
+   <tile gid="249"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -50502,7 +50505,7 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="0"/>
+   <tile gid="69"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -50652,6 +50655,7 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="82"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -50801,6 +50805,7 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="94"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -50950,6 +50955,7 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="79"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -51099,13 +51105,10 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="101"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
+   <tile gid="92"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -51248,11 +51251,14 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="247"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="82"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="101"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -51392,13 +51398,17 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="246"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="252"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="94"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="94"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -51525,6 +51535,7 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="251"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -51537,13 +51548,17 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="252"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="252"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="82"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="101"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -51670,42 +51685,30 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="252"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="246"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="249"/>
    <tile gid="0"/>
+   <tile gid="249"/>
    <tile gid="0"/>
+   <tile gid="250"/>
    <tile gid="0"/>
+   <tile gid="252"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="252"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="89"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
+   <tile gid="89"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
