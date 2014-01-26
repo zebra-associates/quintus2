@@ -298,7 +298,7 @@
   <image source="../images/textset1.png" width="320" height="256"/>
  </tileset>
  <tileset firstgid="245" name="headsonsticks" tilewidth="32" tileheight="32">
-  <image source="../images/headsonsticks.png" width="256" height="32"/>
+  <image source="../images/headsonsticks.png" width="256" height="96"/>
  </tileset>
  <layer name="back" width="150" height="100">
   <properties>
@@ -51706,15 +51706,15 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="89"/>
-   <tile gid="0"/>
+   <tile gid="261"/>
    <tile gid="0"/>
    <tile gid="89"/>
+   <tile gid="258"/>
+   <tile gid="0"/>
+   <tile gid="259"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
+   <tile gid="260"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
