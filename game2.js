@@ -1,18 +1,19 @@
 var CANVAS_WIDTH=1000;
 var CANVAS_HEIGHT=400; //todo
 var bColors = ["#008000","#006400", "#FF4500", "#000080", "#696969", "#800080", "#808000", "#A52A2A", "#8B4513", "#FFDEAD", "#FFFF40","#000080" , "#FFFF80"]; //list 
+var curLevel="test10.tmx";
 
 var Q = Quintus({ development: true });
 
 Q.include("Sprites, Scenes, Input, UI, Touch, 2D, TMX");
 
-//Q.gravityY = 0;
+Q.gravityY = 0;
 
 var gameSpeed=1000;
 
 Q.setup({ height: CANVAS_HEIGHT, width: CANVAS_WIDTH }).touch(); 
 
-//Q.setup({ maximize: true});
+Q.setup({ maximize: true});
 
 Q.input.keyboardControls({
     9: "tab",
@@ -339,14 +340,14 @@ Q.scene('battle', function(stage) {
     stage.options.gridW = 150;
     stage.options.gridH = 100;
 
-    Q.stageTMX("test9.tmx", stage);
+    Q.stageTMX(curLevel, stage);
 
     var things = stage.items[1];
 
 //    stage.remove(things);
 
-    joe = stage.insert(new Q.Engineer({x: 32 * 6 + 16, y: 32 * 32 + 16 }));
-    ally = stage.insert(new Q.Angel({x: 32 * 50 + 16, y: 32 * 42 + 16 }));
+    joe = stage.insert(new Q.Engineer({x: 32 * 6 + 16, y: 32 * 3 + 16 }));
+    ally = stage.insert(new Q.Angel({x: 32 * 50 + 16, y: 32 * 18 + 16 }));
     //ted = stage.insert(new Q.Archer({x: 20, y: 2 }));
 //	joe.p.x=1800;
 //	joe.p.y=800;
@@ -402,7 +403,7 @@ Q.scene('battle', function(stage) {
     });
 });
 
-Q.loadTMX("test9.tmx, things.json", function() {
+Q.loadTMX(curLevel+", things.json", function() {
     Q.load(["archer.png", "engineer.png", "angel.png"], function() {
         Q.compileSheets("things.png", "things.json");
         Q.stageScene('battle');
