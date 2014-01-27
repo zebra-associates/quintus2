@@ -53,6 +53,12 @@
     <property name="sprite" value="smallwindowdark"/>
    </properties>
   </tile>
+  <tile id="10">
+   <properties>
+    <property name="Class" value="GenericObject"/>
+    <property name="sprite" value="hive"/>
+   </properties>
+  </tile>
   <tile id="11">
    <properties>
     <property name="Class" value="GenericObject"/>
@@ -245,6 +251,12 @@
     <property name="sprite" value="stump"/>
    </properties>
   </tile>
+  <tile id="72">
+   <properties>
+    <property name="Class" value="GenericObject"/>
+    <property name="sprite" value="grave"/>
+   </properties>
+  </tile>
   <tile id="73">
    <properties>
     <property name="Class" value="GenericObject"/>
@@ -261,6 +273,17 @@
    <properties>
     <property name="Class" value="GenericObject"/>
     <property name="sprite" value="righttorch"/>
+   </properties>
+  </tile>
+  <tile id="78">
+   <properties>
+    <property name="Class" value="GenericObject"/>
+   </properties>
+  </tile>
+  <tile id="79">
+   <properties>
+    <property name="Class" value="GenericObject"/>
+    <property name="sprite" value="chainend"/>
    </properties>
   </tile>
   <tile id="80">
@@ -290,13 +313,37 @@
   <tile id="84">
    <properties>
     <property name="Class" value="GenericObject"/>
-    <property name="sprite" value="grave"/>
+    <property name="sprite" value="hole"/>
+   </properties>
+  </tile>
+  <tile id="86">
+   <properties>
+    <property name="Class" value="GenericObject"/>
+    <property name="sprite" value=""/>
+   </properties>
+  </tile>
+  <tile id="89">
+   <properties>
+    <property name="Class" value="GenericObject"/>
+    <property name="sprite" value="chain"/>
    </properties>
   </tile>
   <tile id="90">
    <properties>
     <property name="Class" value="GenericObject"/>
     <property name="sprite" value="fence"/>
+   </properties>
+  </tile>
+  <tile id="91">
+   <properties>
+    <property name="Class" value="GenericObject"/>
+    <property name="sprite" value="berrybush"/>
+   </properties>
+  </tile>
+  <tile id="99">
+   <properties>
+    <property name="Class" value="GenericObject"/>
+    <property name="sprite" value="anchor"/>
    </properties>
   </tile>
  </tileset>
@@ -78727,8 +78774,8 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
+   <tile gid="253"/>
+   <tile gid="254"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -78977,8 +79024,8 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
+   <tile gid="263"/>
+   <tile gid="264"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -125591,5 +125638,26 @@
   <object gid="197" x="1280" y="1376"/>
   <object gid="197" x="1248" y="1376"/>
   <object gid="197" x="1216" y="1376"/>
+  <object gid="241" x="6176" y="1472"/>
+  <object gid="248" x="5248" y="480"/>
+  <object gid="258" x="5248" y="512"/>
+  <object gid="258" x="5248" y="544"/>
+  <object gid="258" x="5248" y="576"/>
+  <object gid="258" x="5248" y="608"/>
+  <object gid="258" x="5248" y="640"/>
+  <object gid="258" x="5248" y="704"/>
+  <object gid="258" x="5248" y="672"/>
+  <object gid="258" x="5248" y="736"/>
+  <object gid="258" x="5248" y="768"/>
+  <object gid="258" x="5248" y="800"/>
+  <object gid="258" x="5248" y="832"/>
+  <object gid="258" x="5248" y="864"/>
+  <object gid="258" x="5248" y="896"/>
+  <object gid="258" x="5248" y="928"/>
+  <object gid="258" x="5248" y="960"/>
+  <object gid="258" x="5248" y="992"/>
+  <object gid="258" x="5248" y="1024"/>
+  <object gid="258" x="5248" y="1056"/>
+  <object gid="268" x="5248" y="1088"/>
  </objectgroup>
 </map>

@@ -45,6 +45,12 @@
   "bottle1":{ "sx":32, "sy":256, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 },
   "barrel":{ "sx":64, "sy":256, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 },
   "bottle2":{ "sx":96, "sy":256, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 },
-  "grave":{ "sx":128, "sy":256, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 },
+  "grave":{ "sx":64, "sy":224, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 },
+  "hole":{ "sx":128, "sy":256, "cols":1, "spacingX":0, "spacingY":0, "tilew":64, "tileh":64, "frames":1 },
+  "berrybush":{ "sx":32, "sy":288, "cols":1, "spacingX":0, "spacingY":0, "tilew":96, "tileh":32, "frames":1 },
+  "chainend":{ "sx":288, "sy":224, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 },
+  "chain":{ "sx":288, "sy":256, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 },
+  "anchor":{ "sx":288, "sy":288, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 },
+  "hive":{ "sx":0, "sy":32, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 },
   "fence":{ "sx":0, "sy":288, "cols":1, "spacingX":0, "spacingY":0, "tilew":32, "tileh":32, "frames":1 }
 }
