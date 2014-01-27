@@ -7,7 +7,7 @@ var Q = Quintus({ development: true });
 
 Q.include("Sprites, Scenes, Input, UI, Touch, 2D, TMX");
 
-Q.gravityY = 0;
+//Q.gravityY = 0;
 
 var gameSpeed=1000;
 
@@ -346,7 +346,7 @@ Q.scene('battle', function(stage) {
 
 //    stage.remove(things);
 
-    joe = stage.insert(new Q.Engineer({x: 32 * 6 + 16, y: 32 * 3 + 16 }));
+    joe = stage.insert(new Q.Engineer({x: 32 * 6 + 16, y: 32 * 12 + 16 }));
     ally = stage.insert(new Q.Angel({x: 32 * 50 + 16, y: 32 * 18 + 16 }));
     //ted = stage.insert(new Q.Archer({x: 20, y: 2 }));
 //	joe.p.x=1800;
